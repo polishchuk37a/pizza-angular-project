@@ -1,0 +1,46 @@
+{
+  "pizza": [
+    {
+      "id": 1,
+      "name": "Margarita",
+      "size": "30",
+      "image": "assets/images/pizza-margarita.jpg",
+      "price": 170
+    },
+    {
+      "id": 2,
+      "name": "Pizza Gavai",
+      "size": "35",
+      "image": "assets/images/pizza-gavai.jpg",
+      "price": 185
+    },
+    {
+      "id": 3,
+      "name": "Pizza Tsezar",
+      "size": "30",
+      "image": "assets/images/pizza-tsezar.jpg",
+      "price": 190
+    },
+    {
+      "id": 4,
+      "name": "Mexicano",
+      "size": "25",
+      "image": "assets/images/pizza-mexicano.jpg",
+      "price": 168
+    },
+    {
+      "id": 5,
+      "name": "Ocean Pizza",
+      "size": "30",
+      "image": "assets/images/pizza-ocean.jpg",
+      "price": 230
+    },
+    {
+      "id": 6,
+      "name": "Only Meat Pizza",
+      "size": "30",
+      "image": "assets/images/pizza-only-meat.jpg",
+      "price": 220
+    }
+  ]
+}

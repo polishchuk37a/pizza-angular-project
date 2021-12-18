@@ -1,0 +1,275 @@
+.order-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(37, 39, 48, 0.9);
+
+  .order-header {
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__title {
+      font-family: Nunito, sans-serif;
+
+      span {
+        color: #ff7b00;
+      }
+    }
+
+    .phone-number {
+      font-family: Nunito, sans-serif;
+    }
+  }
+
+  hr {
+    margin: 0;
+  }
+
+  .empty-bucket__message {
+    padding: 30px 15px;
+    text-align: center;
+
+    .no-orders__title {
+      font-family: Nunito, sans-serif;
+      font-size: 30px;
+      color: #5a5c5e;
+      font-weight: 600;
+    }
+
+    .no-orders__img {
+      opacity: 0.9;
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .orders-container {
+
+    .your-orders__title {
+      font-family: Nunito, sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    .show-orders {
+      padding: 30px 15px 10px 15px;
+
+      .order {
+        display: flex;
+        background: #141317;
+        border-radius: 10px;
+
+        .order-img {
+          width: 320px;
+          height: 250px;
+          border-radius: 10px 0 0 10px;
+        }
+
+        .order-info {
+          padding: 20px 30px;
+
+          .order-name {
+            font-family: Nunito, sans-serif;
+            font-size: 30px;
+          }
+
+          .order-size {
+            font-family: Nunito, sans-serif;
+            font-size: 20px;
+            margin-top: 20px;
+          }
+
+          .order-price {
+            font-family: Nunito, sans-serif;
+            font-size: 20px;
+            margin-top: 10px;
+          }
+
+          .remove-btn__content {
+            display: flex;
+            justify-content: flex-end;
+            padding: 45px 0 10px 500px;
+
+            .remove__btn {
+              background: #ff7b00;
+              font-family: Nunito, sans-serif;
+              padding: 5px 20px;
+              border-radius: 5px;
+              border: none;
+              outline: none;
+              color: white;
+
+              &:hover {
+                cursor: pointer;
+                background: #b35804;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .btn-content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 20px 0;
+    align-items: center;
+
+    .total-sum {
+      font-family: Nunito, sans-serif;
+      font-size: 25px;
+      margin-right: 20px;
+    }
+
+    .confirm__btn {
+      font-family: Nunito, sans-serif;
+      padding: 5px 20px;
+      background: #ff7b00;
+      border-radius: 5px;
+      color: white;
+      font-size: 20px;
+      border: none;
+      outline: none;
+
+      &:hover {
+        background: #b35804;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .modal-window__background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(0,0,0,0.8);
+
+    .modal-window {
+      background: #141317;
+      border-radius: 10px;
+
+      .modal-window__header {
+        padding: 10px;
+
+        .modal-window-close {
+          display: flex;
+          justify-content: flex-end;
+
+          .modal-window-close__btn {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #6e6e6e;
+            font-family: Nunito, sans-serif;
+            font-size: 20px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .modal-window__main-title {
+          text-align: center;
+          font-family: Nunito, sans-serif;
+          color: white;
+          font-size: 30px;
+        }
+      }
+
+      .modal-window__body {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .modal-window__title {
+          font-family: Nunito, sans-serif;
+          font-size: 13px;
+          color: #cccccc;
+          margin-top: 25px;
+        }
+
+        .order-input {
+          width: 250px;
+          height: 25px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          padding-left: 8px;
+          padding-right: 8px;
+          background: #6e6e6e;
+          color: white;
+          font-size: 14px;
+        }
+
+        .wishes-to-order {
+          overflow: hidden;
+          padding-left: 8px;
+          padding-right: 8px;
+          width: 250px;
+          height: 60px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          background: #6e6e6e;
+          font-size: 14px;
+          color: white;
+          resize: none;
+        }
+      }
+    }
+
+    .modal-window__footer {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+      .modal-window-confirm {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        align-items: center;
+
+        .modal-window__sum {
+          font-family: Nunito, sans-serif;
+          font-size: 20px;
+        }
+
+        .modal-window__btn {
+          font-family: Nunito, sans-serif;
+          padding: 5px 20px;
+          background: #ff7b00;
+          border-radius: 5px;
+          color: white;
+          font-size: 20px;
+          border: none;
+          outline: none;
+
+          &:hover {
+            background: #b35804;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.order-weight {
+  font-family: Nunito, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+

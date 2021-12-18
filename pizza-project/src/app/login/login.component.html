@@ -1,0 +1,21 @@
+<div class="_container individual-container">
+  <div class="login-container">
+    <div class="login">
+      <h1 class="login-main__title">Welcome to Pizza</h1>
+      <form action="" class="login-form" [formGroup]="loginForm">
+        <p class="login__title">Username</p>
+        <input type="text" class="login-input username" formControlName="username">
+        <p class="login__title">Second name</p>
+        <input type="text" class="login-input second-name" formControlName="secondName">
+        <p class="login__title">Phone number</p>
+        <input type="text" class="login-input phone-number" formControlName="phoneNumber">
+        <p class="login__title">Password</p>
+        <input type="password" class="login-input password" formControlName="password">
+
+        <div class="btns">
+          <button class="login__btn" (click)="login()">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

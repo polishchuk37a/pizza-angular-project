@@ -1,0 +1,95 @@
+<div class="order-container">
+  <div class="order-header">
+    <h1 class="header__title">Pizza
+      <span>24/7</span>
+    </h1>
+    <div>
+      <p class="phone-number">+380 99 173 7395</p>
+      <p class="phone-number">+380 67 453 6534</p>
+    </div>
+  </div>
+  <hr>
+
+  <ng-template #Message>
+    <div class="empty-bucket__message">
+      <p class="no-orders__title">No orders...</p>
+      <img class="no-orders__img" src="../../assets/images/empty-bucket2.png" alt="">
+    </div>
+  </ng-template>
+
+  <div class="orders-container" *ngIf="isOrdered; else Message">
+    <p class="your-orders__title">Your orders</p>
+
+    <div class="show-orders" *ngFor="let order of ordersPizza">
+      <div class="order">
+        <img src="{{order.image}}" alt="" class="order-img">
+        <div class="order-info">
+          <p class="order-name">{{order.name}}</p>
+          <hr>
+          <p class="order-size">Size: {{order.size}}</p>
+          <p class="order-price">Price: {{order.price}} UAH</p>
+
+          <div class="remove-btn__content">
+            <button class="remove__btn" (click)="removePizzaItem(order)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-orders" *ngFor="let order of ordersSushi">
+      <div class="order">
+        <img src="{{order.image}}" alt="" class="order-img">
+        <div class="order-info">
+          <p class="order-name">{{order.name}}</p>
+          <hr>
+          <p class="order-weight">Weight: {{order.description.weight}}g</p>
+          <p class="order-price">Price: {{order.price}} UAH</p>
+
+          <div class="remove-btn__content">
+            <button class="remove__btn" (click)="removeSushiItem(order)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-content">
+      <p class="total-sum">Total sum: {{result}} UAH</p>
+      <button class="confirm__btn" (click)="openModalWindow()">Confirm</button>
+    </div>
+  </div>
+
+  <div class="modal-window__background" *ngIf="isOpened">
+    <div class="modal-window">
+
+      <div class="modal-window__header">
+        <div class="modal-window-close">
+          <button class="modal-window-close__btn" (click)="closeModalWindow()">&#10006;</button>
+        </div>
+        <p class="modal-window__main-title">Making order</p>
+      </div>
+
+      <div class="modal-window__body">
+        <form action="" [formGroup]="orderForm">
+          <p class="modal-window__title">Your name</p>
+          <input type="text" class="order-input" formControlName="name">
+          <p class="modal-window__title">Your phone number</p>
+          <input type="text" class="order-input" formControlName="phone">
+          <p class="modal-window__title">Your address</p>
+          <input type="text" class="order-input" formControlName="address">
+          <p class="modal-window__title">Wishes to order</p>
+          <textarea class="wishes-to-order" formControlName="wishes"></textarea>
+        </form>
+      </div>
+
+      <div class="modal-window__footer">
+        <div class="modal-window-confirm">
+          <p class="modal-window__sum">Sum: {{result}} UAH</p>
+          <button class="modal-window__btn" (click)="getUserDataForm()">Ok</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

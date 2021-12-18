@@ -1,0 +1,37 @@
+<section class="main-body">
+  <h1 class="body__title">Pizza</h1>
+  <div class="content">
+    <div class="box" *ngFor="let pizza of pizzaData">
+      <div class="img-box">
+        <img src="{{pizza.image}}" alt="" class="img">
+      </div>
+      <div class="info">
+        <p class="name">{{pizza.name}}</p>
+        <p class="size">Size: {{pizza.size}}</p>
+        <p class="price">Price: {{pizza.price}} UAH</p>
+      </div>
+
+      <div class="pizza-order">
+        <button class="pizza-order__btn" (click)="addPizzaToOrder(pizza)">Add to order</button>
+      </div>
+
+    </div>
+  </div>
+
+  <h1 class="body__title sushi">Sushi</h1>
+  <div class="content">
+    <div class="box" *ngFor="let sushi of sushiData">
+      <div class="img-box">
+        <img src="{{sushi.image}}" alt="" class="img">
+      </div>
+      <div class="info">
+        <p class="name">{{sushi.name}}</p>
+        <p class="weight">Weight: {{sushi.description.weight}}</p>
+        <p class="price">Price: {{sushi.price}} UAH</p>
+      </div>
+      <div class="sushi-order">
+        <button class="sushi-order__btn" (click)="addSushiToOrder(sushi)">Add to order</button>
+      </div>
+    </div>
+  </div>
+</section>

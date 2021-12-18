@@ -1,0 +1,146 @@
+.main-body {
+  padding: 20px 15px 90px 15px;
+
+  .body__title {
+    font-family: Nunito, sans-serif;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .box {
+      width: 300px;
+      height: 350px;
+      background: #14161f;
+      border-radius: 5px;
+      margin-top: 30px;
+
+      .img-box {
+        width: 300px;
+        height: 200px;
+
+        .img {
+          border-radius: 5px 5px 0 0;
+          width: 300px;
+          height: 200px;
+        }
+      }
+
+      .info {
+        padding: 20px 20px 10px 20px;
+
+        .name {
+          font-family: Nunito, sans-serif;
+          font-size: 20px;
+        }
+
+        .size {
+          margin-top: 10px;
+          font-family: Nunito, sans-serif;
+          font-size: 15px;
+        }
+
+        .price {
+          font-family: Nunito, sans-serif;
+          font-size: 15px;
+        }
+      }
+
+      .pizza-order {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+
+
+        .count__title {
+          font-family: Nunito, sans-serif;
+
+          .count-select {
+            background: transparent;
+            color: white;
+            outline: none;
+            border: none;
+
+            .count-option {
+              background: #141317;
+              color: white;
+              border: none;
+              outline: none;
+            }
+          }
+        }
+
+        .pizza-order__btn {
+          background: #ff7b00;
+          color: white;
+          font-family: Nunito, sans-serif;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          padding: 5px 10px;
+
+          &:hover {
+            cursor: pointer;
+            background: #b35804;
+          }
+        }
+      }
+    }
+  }
+
+
+  .sushi {
+    margin-top: 20px;
+  }
+
+  .weight {
+    font-family: Nunito, sans-serif;
+    margin-top: 10px;
+  }
+
+  .sushi-order {
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .additions__title {
+      font-family: Nunito, sans-serif;
+
+      .additions-select {
+        background: transparent;
+        color: white;
+        outline: none;
+        border: none;
+
+        .additions-option {
+          background: #141317;
+          color: white;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    .sushi-order__btn {
+      background: #ff7b00;
+      color: white;
+      font-family: Nunito, sans-serif;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+      &:hover {
+        cursor: pointer;
+        background: #b35804;
+      }
+    }
+  }
+}
